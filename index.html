@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Usuario</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#f0f2f5;
+      display:flex;
+      flex-direction:column;
+      min-height:100vh;
+    }
+
+    header{
+      background:#4a90e2;
+      color:white;
+      text-align:center;
+      padding:20px;
+    }
+
+    /* LOGO */
+    .logo{
+      width:120px;
+      height:120px;
+      border-radius:50%;
+      border:4px solid white;
+      margin-bottom:10px;
+      object-fit:cover;
+    }
+
+    main{
+      flex:1;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:20px;
+    }
+
+    .contenedor{
+      background:white;
+      width:100%;
+      max-width:400px;
+      padding:25px;
+      border-radius:10px;
+      box-shadow:0px 4px 10px rgba(0,0,0,0.2);
+    }
+
+    /* IMAGEN DE PERFIL */
+    .perfil{
+      width:120px;
+      height:120px;
+      border-radius:50%;
+      display:block;
+      margin:0 auto 20px;
+      object-fit:cover;
+    }
+
+    form{
+      display:flex;
+      flex-direction:column;
+    }
+
+    label{
+      margin-top:10px;
+      margin-bottom:5px;
+      font-weight:bold;
+    }
+
+    input{
+      padding:10px;
+      border:1px solid #ccc;
+      border-radius:5px;
+    }
+
+    button{
+      margin-top:20px;
+      padding:12px;
+      border:none;
+      border-radius:5px;
+      background:#4a90e2;
+      color:white;
+      font-size:16px;
+      cursor:pointer;
+    }
+
+    button:hover{
+      background:#357abd;
+    }
+
+    footer{
+      background:#222;
+      color:white;
+      text-align:center;
+      padding:15px;
+    }
+
+    /* RESPONSIVO */
+    @media(max-width:600px){
+
+      .contenedor{
+        padding:15px;
+      }
+
+      header h1{
+        font-size:22px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+
+    <!-- LOGO -->
+    <!-- La imagen logo.png debe estar en la misma carpeta -->
+    <img 
+      src="logo.png"
+      alt="Logo Registro"
+      class="logo">
+
+    <h1>Registro de Usuario</h1>
+
+  </header>
+
+  <!-- MAIN -->
+  <main>
+
+    <div class="contenedor">
+
+      <!-- FOTO PERFIL -->
+      <img 
+        src="perfil.png"
+        alt="Foto de Perfil"
+        class="perfil">
+
+      <!-- FORMULARIO -->
+      <form>
+
+        <label>Nombre Completo</label>
+        <input 
+          type="text"
+          placeholder="Ingresa tu nombre"
+          required>
+
+        <label>Correo Electrónico</label>
+        <input 
+          type="email"
+          placeholder="correo@gmail.com"
+          required>
+
+        <label>Contraseña</label>
+        <input 
+          type="password"
+          placeholder="Mínimo 8 caracteres"
+          minlength="8"
+          required>
+
+        <label>Fecha de Nacimiento</label>
+        <input 
+          type="date"
+          required>
+
+        <label>Color Favorito</label>
+        <input 
+          type="color">
+
+        <label>País</label>
+        <input 
+          list="paises"
+          placeholder="Selecciona tu país">
+
+        <!-- DATALIST -->
+        <datalist id="paises">
+          <option value="México">
+          <option value="Argentina">
+          <option value="Colombia">
+          <option value="España">
+          <option value="Chile">
+          <option value="Perú">
+        </datalist>
+
+        <button type="submit">
+          Registrarse
+        </button>
+
+      </form>
+
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Proyecto Final - GitHub Pages</p>
+  </footer>
+
+</body>
+</html>
